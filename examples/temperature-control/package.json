@@ -3,14 +3,20 @@
   "description": "AWS IoT Temperature Control Simulation",
   "version": "1.0.0",
   "author": {
-     "name":"Amazon Web Services",
-     "email":"",
-     "url":"http://aws.amazon.com"
+    "name": "Amazon Web Services",
+    "email": "",
+    "url": "http://aws.amazon.com"
   },
   "main": "temperature-control.js",
   "license": "Apache-2.0",
   "dependencies": {
     "blessed": "0.1.81",
-    "blessed-contrib": "2.3.3"
-  }
+    "blessed-contrib": "2.3.3",
+    "snyk": "^1.88.2"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
